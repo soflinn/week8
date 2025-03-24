@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+//declare UI and initializing
     private EditText inputFirstNumber, inputSecondNumber;
     private Button buttonPlus, buttonMinus, buttonMultiply, buttonDivide;
     private TextView textResult;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMultiply = findViewById(R.id.buttonMultiply);
         buttonDivide = findViewById(R.id.buttonDivide);
         textResult = findViewById(R.id.textResult);
-
+// operators
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+//numbers and calculate steps
     private void calculateResult(char operator) {
         String firstNumberStr = inputFirstNumber.getText().toString();
         String secondNumberStr = inputSecondNumber.getText().toString();
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     result = firstNumber / secondNumber;
                     break;
             }
-
+//int or float
             if (result == (int) result) {
                 textResult.setText(String.valueOf((int) result));
             } else {
